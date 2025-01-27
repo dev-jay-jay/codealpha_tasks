@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB; /* Light sky blue */
+}
+
+header {
+    background: #003366; /* Dark blue */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #E0F7FA; /* Light cyan */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #00509E; /* Slate blue */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+section {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #B2EBF2; /* Lighter cyan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+#age-results, #predictor-results {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #B2EBF2; /* Match the section background */
+    border-radius: 5px;
+    background: #80DEEA; /* Even lighter cyan for results */
+}
+
+#birthday-inputs, #predictor-inputs {
+    margin: 20px 0;
+}
+
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00509E; /* Slate blue */
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #003366; /* Dark blue */
+    color: #E0F7FA; /* Light cyan */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #00509E; /* Slate blue on hover */
+}

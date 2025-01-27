@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Age Calculator</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section id="age-calculator">
+                <h2>Age Calculator</h2>
+                <p>My Age Calculator accurately calculates your exact age and gives the answer to "How old am I today?"</p>
+
+                <div id="age-results">
+                    <p>Your age is: <span id="years"></span>years  <span id="months"></span>months  <span id="days"></span>days  <span id="hours"></span>hours  <span id="minutes"></span>minutes </p>
+                    <p>You were born on: <span id="birth-date"></span></p>
+                    <p>Next Birthday in: <span id="next-birthday"></span></p>
+                </div>
+
+                <div id="birthday-inputs">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" required>
+
+                    <label for="birth-time">Birth Time (optional):</label>
+                    <input type="time" id="birth-time">
+
+                    <label for="timezone">Timezone:</label>
+                    <select id="timezone"></select>
+
+                    <button id="calculate-button">Calculate</button>
+                </div>
+            </section>
+
+            <section id="age-predictor">
+                <h2>Age Predictor</h2>
+                <p>Predict how old you were or will be on a specific date.</p>
+
+                <div id="predictor-results">
+                    <p>Your age  will be: <span id="predicted-years"></span> years <span id="predicted-months"></span> months <span id="predicted-days"></span> days</p>
+                </div>
+
+                <div id="predictor-inputs">
+                    <label for="predictor-birthday">Birthday:</label>
+                    <input type="date" id="predictor-birthday" required>
+
+                    <label for="predictor-date">Date to Predict:</label>
+                    <input type="date" id="predictor-date" required>
+
+                    <button id="predict-button">Predict Age</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
