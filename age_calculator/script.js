@@ -1,4 +1,4 @@
-// Get necessary elements
+
 const birthdayInput = document.getElementById('birthday');
 const birthTimeInput = document.getElementById('birth-time');
 const timezoneSelect = document.getElementById('timezone');
@@ -12,7 +12,7 @@ const predictedMonths = document.getElementById('predicted-months');
 const predictedDays = document.getElementById('predicted-days');
 const predictedDate = document.getElementById('predicted-date');
 
-// Populate timezone options
+
 const timezones = [
     { value: 'UTC', label: 'UTC' },
     { value: 'GMT', label: 'GMT' },
@@ -45,7 +45,7 @@ calculateButton.addEventListener('click', () => {
     document.getElementById('next-birthday').textContent = calculateNextBirthday(birthday);
 });
 
-// Function to calculate age
+
 function calculateAge(birthday, birthTime, timezone) {
     const now = new Date();
     const birthDateTime = new Date(birthday);
@@ -56,7 +56,7 @@ function calculateAge(birthday, birthTime, timezone) {
         birthDateTime.setMinutes(minutes);
     }
 
-    // Adjust for timezone if necessary
+
     const timezoneOffset = now.getTimezoneOffset() * 60000; // in milliseconds
     const localNow = new Date(now.getTime() + timezoneOffset);
 
@@ -79,7 +79,7 @@ function calculateAge(birthday, birthTime, timezone) {
     };
 }
 
-// Function to calculate next birthday
+
 function calculateNextBirthday(birthday) {
     const nextBirthday = new Date(birthday);
     nextBirthday.setFullYear(new Date().getFullYear());
@@ -89,7 +89,7 @@ function calculateNextBirthday(birthday) {
     return nextBirthday.toDateString();
 }
 
-// Add event listener to the predict button
+
 predictButton.addEventListener('click', () => {
     const predictorBirthday = new Date(predictorBirthdayInput.value);
     const predictorDate = new Date(predictorDateInput.value);
@@ -102,7 +102,6 @@ predictButton.addEventListener('click', () => {
     predictedDate.textContent = predictorDate.toDateString(); // Display the specific date
 });
 
-// Function to calculate age on a specific date
 function calculateAgeOnDate(birthday, specificDate) {
     const totalDays = Math.floor((specificDate - birthday) / (1000 * 60 * 60 * 24));
     const years = specificDate.getFullYear() - birthday.getFullYear();
